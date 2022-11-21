@@ -1,0 +1,30 @@
+{% extends "polls/base_polls.html" %}
+
+{% block title %}My polls{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
+{% if latest_question_list %}
+    <div id="formActivos">
+        <h1>FORMULARIO DISPONIBLE</h1>
+        <ul>
+        <!-- mostrar preguntas ordenadas  -->
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,26 @@
+{% extends "polls/base_polls.html" %}
+     
+    {% block title %}Result of questions{% endblock %}
+     
+    {% block content %}
+     
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">   
+
+    <div id="formQuestion">
+        <h1>{{ question.question_text }}</h1>
+        <!-- añadirle un marco   -->
+        <div id="results">
+            <ul>
+                {% for choice in question.choice_set.all %}
+                    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <a id="genericBtn" href="{% url 'polls:detail' question.id %}">Votar de nuevo</a>    
+        <a id="genericBtn" href="/polls">Volver a la pantalla principal</a>    
+    </div>
+
+    {% endblock %}
+

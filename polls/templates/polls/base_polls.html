@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>{% block title %}My polls app{% endblock %}</title>
+    
+    {% load static %}
+    <link id="inicio" rel="stylesheet" href="{% static 'polls/style.css' %}">
+    
+</head>
+
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        
+       <h1><a href="/polls"><img id="logoEncuesta" src="..\..\static\polls\images\logoEncuesta.png"> Home</a></h1>
+       <!-- Enlace para entrar a admin-->
+         <h1><a id="adminSite" href="/admin" target="_blank">Admin</a></h1>
+
+       
+
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+
+</body>
+</html>

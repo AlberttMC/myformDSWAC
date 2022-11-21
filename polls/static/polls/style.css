@@ -1,0 +1,147 @@
+body {
+    background: rgb(0, 0, 0) url("images/background.png") border-box no-repeat fixed center;
+    background-size: 100% 100%;
+}
+
+#logoEncuesta {
+    width:  60px;
+    height: 60px;
+    padding: 0px;
+}
+ 
+#sidebar {
+        background-color: rgb(42, 42, 42);
+        position: top;
+        overflow-x: hidden;
+    }
+
+#sidebar h1 a {
+        display: block;
+        color: rgb(85, 255, 178);
+        text-decoration: none;
+        font-size: 200%;
+        padding-left: 50px;
+    }
+
+#sidebar h1 #adminSite {
+        display: block;
+        color: rgb(85, 255, 178);
+        text-decoration: none;
+        font-size: 150%;
+        padding-left: 50px;
+        /*posicionar a la derecha del sidebar*/
+        position: absolute;
+        right: 30px;
+        top: 30px;
+
+
+    }
+
+#formActivos{
+    background-color: rgb(55, 55, 55);
+    position: left;
+    width:  50%;
+    height: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(85, 255, 178);
+}
+
+#formActivos h1 {
+    color: rgb(208, 209, 251);
+    padding-left: 20px;
+  }
+
+
+#formActivos li {
+        color: rgb(162, 162, 255);
+    }
+    
+#formActivos li a {
+    color: rgb(128, 166, 255);
+    text-decoration: none;
+    font-size: 120%;
+    padding-left: 20px;
+}
+
+#formQuestion{
+    background-color: rgb(55, 55, 55);
+    position: right;
+    width:  50%;
+    height: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(85, 255, 178);
+}
+
+#results {
+
+    background-color: rgb(55, 55, 55);
+    position: top;
+    width:  50%;
+    height: 100%;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(85, 255, 178);
+}
+
+
+
+#formQuestion h1 {
+    color: rgb(208, 209, 251);
+    padding-left: 20px;
+  }
+
+#formQuestion label {
+    color: rgb(162, 162, 255);
+    padding-left: 20px;
+    font-size: 20px;
+  }
+#formQuestion #voteBtn {
+    color: rgb(0, 0, 0);
+    background-color: aqua;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+  }
+
+   #formQuestion #genericBtn{
+    color: rgb(0, 0, 0);
+    background-color: aqua;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding: 8px;
+    margin-top: 5px;
+    margin-left: 30px;    
+  }
+
+  #formQuestion li{
+    color: rgb(162, 162, 255);
+    padding-left: 20px;
+    font-size: 20px;
+  }
+
+  #formQuestion a{
+    color: rgb(218, 105, 249);
+    text-decoration: none;
+    font-size: 120%;
+    padding-left: 20px;
+  }
+
+  #errorMessage{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 17, 17);
+    font-weight: bold;
+    width: 50%;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+
+  

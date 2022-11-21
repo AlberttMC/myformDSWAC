@@ -1,0 +1,29 @@
+{% extends "polls/base_polls.html" %}
+     
+    {% block title %}My questions{% endblock %}
+     
+    {% block content %}
+     
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">   
+
+    <div id="formQuestion">
+        <form action="{% url 'polls:vote' question.id %}" method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend><h1>{{ question.question_text }}</h1></legend>
+                {% if error_message %}<p id="errorMessage"><strong>{{ error_message }}</strong></p>{% endif %}
+                {% for choice in question.choice_set.all %}
+                    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+                {% endfor %}
+            </fieldset>
+            <input id="voteBtn" type="submit" value="Votar y continuar">
+            <!-- Añadir un botón que rediriga al resultado de la pregunta -->
+            <a href="{% url 'polls:results' question.id %}" id="genericBtn">Ver resultados</a>
+            
+        </form>
+    </div>
+    
+    {% endblock %}
+
