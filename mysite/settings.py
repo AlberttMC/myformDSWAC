@@ -30,12 +30,12 @@ ALLOWED_HOSTS = ['localhost','formdswac.azurewebsites.net']
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    "formdswac.azurewebsites.net",
+    "https://formdswac.azurewebsites.net",
 ]
 
 
 
-CSRF_TRUSTED_ORIGINS = ['formdswac.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://formdswac.azurewebsites.net']
 # Application definition
 
 INSTALLED_APPS = [
