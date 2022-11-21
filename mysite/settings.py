@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','formdswac.azurewebsites.net']
 
+CSRF_TRUSTED_ORIGINS = ['formdswac.azurewebsites.net']
 # Application definition
 
 INSTALLED_APPS = [
