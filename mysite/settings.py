@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ag7zq=m^$aoewo(b&k&@+-2&=^a6-)-3y06b$zc=3$$%50jo#l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost','https://formdswac.azurewebsites.net']
 
 # Application definition
 
