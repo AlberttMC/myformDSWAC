@@ -26,6 +26,14 @@ SECRET_KEY = 'django-insecure-ag7zq=m^$aoewo(b&k&@+-2&=^a6-)-3y06b$zc=3$$%50jo#l
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','formdswac.azurewebsites.net']
+#añadir origen CSRF para que funcione en azure
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [
+    "formdswac.azurewebsites.net",
+]
+
+
 
 CSRF_TRUSTED_ORIGINS = ['formdswac.azurewebsites.net']
 # Application definition
